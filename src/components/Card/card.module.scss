@@ -1,0 +1,26 @@
+@import "../../variaveis/cores";
+
+.container{
+    padding: 0 0 1em 0;
+    margin-top: .5em;
+    width: 202px;
+    background-color: $cinza;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .capa{
+        width: 100%;
+    }
+    .favoritar, h2{
+        padding: 0.5em 1em;
+    }
+    .favoritar{
+        width: 24px;
+        height: 24px;
+    }
+    h2{
+        font-weight: 700;
+        font-size: 18px;
+        color: $preto;
+    }
+}

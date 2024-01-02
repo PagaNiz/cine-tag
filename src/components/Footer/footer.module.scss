@@ -1,0 +1,16 @@
+@import "../../variaveis/cores";
+
+.footer {
+    background-color: $preto;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    align-items: center;
+
+    h2 {
+        color: $branco;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 33px 0;
+    }
+}
