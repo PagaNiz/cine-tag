@@ -1,26 +1,27 @@
-import style from "./inicio.module.scss";
-import videos from 'json/db.json'
+import style from "./favoritos.module.scss"
 import Banner from "components/Banner"
 import Card from "components/Card"
 import Titulo from "components/Titulo"
+import { useFavoritoContext } from "contextos/Favoritos"
 import { Fragment } from "react"
 
-const Inicio = () => {
+const Favoritos = () =>{
+    const {favorito} = useFavoritoContext();
     return (
         <Fragment>
             <Banner
-                imagem="home"
+                imagem="favoritos"
             />
             <Titulo>
-                <h1>Um lugar para guardar seus vídeos e filmes!</h1>
+                <h1>Meus Favoritos</h1>
             </Titulo>
             <section className={style.container}>
-                {videos.map((video) => {
-                   return <Card {...video} key={video.id} />
+                {favorito.map((fav) => {
+                    return <Card {...fav} key={fav.id}/>
                 })}
             </section>
         </Fragment>
     )
 }
 
-export default Inicio
+export default Favoritos
